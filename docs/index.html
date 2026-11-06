@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Task Manager</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <div>
+                <p class="subtitle">MY PERSONAL WORKSPACE</p>
+                <h1>Task Manager</h1>
+                <p class="description">
+                    Organize your day and get things done.
+                </p>
+            </div>
+        </header>
+
+        <section class="stats">
+
+            <div class="stat-card">
+                <p>Total Tasks</p>
+                <h2 id="totalTasks">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <p>Completed</p>
+                <h2 id="completedTasks">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <p>Pending</p>
+                <h2 id="pendingTasks">0</h2>
+            </div>
+
+        </section>
+
+        <section class="task-section">
+
+            <h2>Add a New Task</h2>
+
+            <form id="taskForm">
+
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="What do you need to do?"
+                    maxlength="150"
+                    required
+                >
+
+                <button type="submit">
+                    + Add Task
+                </button>
+
+            </form>
+
+            <div class="filter-buttons">
+
+                <button class="filter active" data-filter="all">
+                    All
+                </button>
+
+                <button class="filter" data-filter="pending">
+                    Pending
+                </button>
+
+                <button class="filter" data-filter="completed">
+                    Completed
+                </button>
+
+            </div>
+
+            <div id="taskList" class="task-list">
+
+                <p class="empty-message">Loading tasks...</p>
+
+            </div>
+
+        </section>
+
+        <footer>
+            <p>Task Manager | Built with HTML, CSS, JavaScript & C#</p>
+        </footer>
+
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
